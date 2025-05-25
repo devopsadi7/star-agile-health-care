@@ -28,7 +28,7 @@ pipeline {
             when{ expression {env.GIT_BRANCH == 'master'}}
             steps{
                 script{
-                     kubernetesDeploy (configs: 'deploymentservice.yaml' ,kubeconfigId: 'kubernetes')
+                     kubernetesDeploy (configs: 'deploymentservice.yaml' ,kubeconfigId: 'kube')
                    
                 }
             }
