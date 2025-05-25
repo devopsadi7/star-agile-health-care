@@ -4,7 +4,7 @@ pipeline {
         stage('Build Maven'){
             steps{
                 git url:'https://github.com/devopsadi7/star-agile-health-care.git', branch: "master"
-                sh 'mvn clean install'
+                sh 'mvn clean package'
             }
         }
         stage('Build docker image'){
