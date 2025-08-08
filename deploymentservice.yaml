@@ -16,6 +16,7 @@ spec:
       containers:
         - name: health
           image: adithyandevops/healthcare:v1
+          imagePullPolicy: Always
           ports:
             - containerPort: 8082
           env:
